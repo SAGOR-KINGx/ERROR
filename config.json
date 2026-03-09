@@ -8,27 +8,22 @@
   },
   "antiInbox": false,
   "language": "en",
-  "nickNameBot": "SAGOR 🍒",
+  "nickNameBot": "SAGOR TEST",
   "prefix": ".",
   "adminOnly": {
     "enable": false,
     "ignoreCommand": []
   },
   "adminBot": [
-    "61581197276223",
-    ""
+    "61581197276223"
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": [
-      ""
-    ]
+    "whiteListIds": []
   },
   "whiteListModeThread": {
     "enable": false,
-    "whiteListThreadIds": [
-      ""
-    ]
+    "whiteListThreadIds": []
   },
   "database": {
     "type": "sqlite",
@@ -60,8 +55,8 @@
     "ignoreEvents": ""
   },
   "autoRefreshFbstate": true,
-  "autoReloginWhenChangeAccount": false,
-  "autoRestartWhenListenMqttError": false,
+  "autoReloginWhenChangeAccount": true,
+  "autoRestartWhenListenMqttError": true,
   "restartListenMqtt": {
     "enable": true,
     "timeRestart": 3600000,
@@ -112,6 +107,6 @@
     "selfListen": false,
     "selfListenEvent": false,
     "autoMarkDelivery": false,
-    "autoReconnect": false
+    "autoReconnect": true
   }
 }
