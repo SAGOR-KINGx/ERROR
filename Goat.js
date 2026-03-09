@@ -31,8 +31,8 @@ const log = require('./logger/log.js');
 process.env.BLUEBIRD_W_FORGOTTEN_RETURN = 0;
 
 const { NODE_ENV } = process.env;
-const dirConfig = path.normalize(`${__dirname}/config${['production', 'development'].includes(NODE_ENV) ? '.dev.json' : '.json'}`);
-const dirConfigCommands = path.normalize(`${__dirname}/configCommands${['production', 'development'].includes(NODE_ENV) ? '.dev.json' : '.json'}`);
+const dirConfig = path.normalize(`${__dirname}/config.json`);
+const dirConfigCommands = path.normalize(`${__dirname}/configCommands.json`);
 const appstateDir = path.normalize(`${__dirname}/appstate`);
 
 function validJSON(pathDir) {
