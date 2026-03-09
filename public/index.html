@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAHIDUL ISLAM SAGOR</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(120deg,#0f172a,#020617);
+color:#e5e7eb;
+}
+
+/* HEADER */
+header{
+text-align:center;
+padding:80px 20px;
+background:radial-gradient(circle,#1e293b,#020617);
+}
+
+.profile-pic{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #3b82f6;
+transition:.5s;
+}
+.profile-pic:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px #3b82f6;
+}
+
+/* VERIFIED BADGE */
+.badge{
+width:28px;
+margin-left:6px;
+animation:badgeGlow 2s infinite alternate;
+}
+@keyframes badgeGlow{
+from{filter:drop-shadow(0 0 2px #3b82f6)}
+to{filter:drop-shadow(0 0 12px #38bdf8)}
+}
+
+header h1{
+font-size:38px;
+margin:10px 0 0;
+}
+
+header p{opacity:.8}
+
+/* NAV */
+nav{
+background:#020617;
+padding:15px;
+text-align:center;
+}
+nav a{
+color:#60a5fa;
+margin:0 20px;
+text-decoration:none;
+font-weight:600;
+}
+
+.card{
+background:transparent;
+padding:30px;
+margin:40px auto;
+max-width:900px;
+border-radius:0;
+box-shadow:none;
+}.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 80px rgba(56,189,248,.6);
+}
+
+/* RGB TYPING TEXT */
+#typing-about{
+font-size:24px;
+font-weight:700;
+background:linear-gradient(90deg,red,orange,yellow,green,cyan,blue,violet);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-size:400%;
+animation:rgbText 6s linear infinite;
+}
+@keyframes rgbText{
+0%{background-position:0%}
+100%{background-position:400%}
+}
+
+/* LANGUAGE RGB RING */
+.lang-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:70px; /* আগে 30px ছিল → এখন বেশি */
+}
+.lang{
+position:relative;
+width:100px;
+height:100px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#020617;
+overflow:hidden;
+}
+.lang::before{
+content:"";
+position:absolute;
+width:140%;
+height:140%;
+background:conic-gradient(red,orange,yellow,green,cyan,blue,violet,red);
+animation:spin 4s linear infinite;
+}
+.lang::after{
+content:"";
+position:absolute;
+inset:6px;
+background:#020617;
+border-radius:50%;
+}
+.lang img{
+position:relative;
+width:45px;
+z-index:2;
+}
+@keyframes spin{
+from{transform:rotate(0)}
+to{transform:rotate(360deg)}
+}
+
+/* BLUR IMAGE SECTION */
+.blur-img{
+width:320px;
+max-width:90%;
+border-radius:14px;
+filter:blur(8px);
+transition:.5s;
+cursor:pointer;
+}
+.blur-img.active{
+filter:blur(0);
+transform:scale(1.08);
+}
+
+/* DASHBOARD */
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+.widget{
+background:#020617;
+padding:25px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 0 20px rgba(59,130,246,.25);
+}
+.widget h3{color:#60a5fa}
+
+/* SOCIAL */
+.social-icons a{
+display:inline-flex;
+justify-content:center;
+align-items:center;
+width:55px;
+height:55px;
+margin:12px;
+border-radius:50%;
+background:white;
+color:black;
+font-size:22px;
+text-decoration:none;
+transition:.4s;
+}
+.social-icons a:hover{
+transform:scale(1.15);
+box-shadow:0 0 25px #3b82f6;
+background:black;
+color:white;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+opacity:.8;
+}
+
+@media(max-width:600px){
+header h1{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<<header>
+
+<img src="https://i.postimg.cc/15KD5KJk/1736400994747.jpg"
+class="profile-pic" alt="Profile">
+
+<h1>
+JAHIDUL ISLAM SAGOR
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+class="badge">
+</h1>
+
+<p>Full Stack Developer • Bot Developer • Designer</p>
+
+
+<!-- ABOUT -->
+<section id="about">
+<div class="card">
+<h2></h2>
+<p id="typing-about"></p>
+
+<h3 style="margin-top:40px"></h3>
+<div class="lang-container">
+<div class="lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></div>
+<div class="lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></div>
+<div class="lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div>
+<div class="lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"></div>
+<div class="lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"></div>
+</div>
+</div>
+</section>
+
+<!-- BLUR IMAGE -->
+<section style="text-align:center;padding:60px 0;">
+<img src="https://i.postimg.cc/sD2g79V2/IMG-20250419-070353-574-(1).jpg" class="blur-img" onclick="this.classList.toggle('active')">
+</section>
+
+<!-- DASHBOARD -->
+<section id="developer">
+<div class="card">
+<h2>Developer Dashboard</h2>
+<div class="dashboard">
+<div class="widget"><h3>Projects</h3><p>12+</p></div>
+<div class="widget"><h3>Experience</h3><p>2 Years</p></div>
+<div class="widget"><h3>Clients</h3><p>20+</p></div>
+<div class="widget"><h3>Repositories</h3><p>35+</p></div>
+</div>
+</div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+<div style="text-align:center;padding:60px 20px;">
+<h2>Connect With Me</h2>
+
+<div class="social-icons">
+
+<a href="https://github.com/SAGOR-KINGx" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://facebook.com/SAGOR.69x" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://t.me/xxSaGorxx" target="_blank">
+<i class="fab fa-telegram"></i>
+</a>
+
+
+</div>
+
+</div>
+</section>
+
+
+<script>
+const aboutText="I'm simple developer";
+let i=0;
+function typeAbout(){
+if(i<aboutText.length){
+document.getElementById("typing-about").innerHTML+=aboutText.charAt(i);
+i++;
+setTimeout(typeAbout,150);
+}}
+window.onload=typeAbout;
+</script>
+
+<script>
+window.onload=typeAbout;
+</script>
+
+<!-- ❄ Snow Effect Start -->
+<style>
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 18px;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+</style>
+
+<script>
+function createSnow() {
+  const snow = document.createElement("div");
+  snow.classList.add("snowflake");
+  snow.innerHTML = "❄";
+  
+  snow.style.left = Math.random() * window.innerWidth + "px";
+  snow.style.animationDuration = (3 + Math.random() * 5) + "s";
+  snow.style.opacity = Math.random();
+
+  document.body.appendChild(snow);
+
+  setTimeout(() => snow.remove(), 8000);
+}
+
+setInterval(createSnow, 200);
+</script>
+<!-- ❄ Snow Effect End -->
+
+<audio id="bg-music" autoplay loop muted>
+  <source src="https://raw.githubusercontent.com/SAGOR-KINGx/SaGor/main/SaGor.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bg-music");
+
+// Try autoplay
+window.addEventListener("load", () => {
+  music.play().then(() => {
+    music.muted = false;
+  }).catch(() => {});
+});
+
+// Mobile fallback
+document.addEventListener("click", () => {
+  music.muted = false;
+  music.play();
+});
+</script>
+
+<!-- CONTACT FORM -->
+<section id="contact" style="text-align:center;padding:60px 20px;">
+<h2>Contact Me</h2>
+
+<form action="https://formsubmit.co/jahidullx6@gmail.com" method="POST"
+style="max-width:500px;margin:auto;">
+
+<input type="text" name="name" placeholder="Your Name" required
+style="width:100%;padding:12px;margin:10px 0;border-radius:6px;border:none;">
+
+<input type="email" name="email" placeholder="Your Email" required
+style="width:100%;padding:12px;margin:10px 0;border-radius:6px;border:none;">
+
+<textarea name="message" placeholder="Your Message" required
+style="width:100%;padding:12px;margin:10px 0;border-radius:6px;border:none;height:120px;"></textarea>
+
+<button type="submit"
+style="padding:12px 25px;background:#3b82f6;color:white;border:none;border-radius:8px;cursor:pointer;">
+Send Message
+</button>
+
+</form>
+</section>
+<footer>
+© 2026 Jahidul Islam Sagor • Developer Portfolio
+</footer>
+
+</body>
+</html>
