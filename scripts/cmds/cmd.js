@@ -28,7 +28,7 @@ module.exports = {
 	config: {
 		name: "cmd",
 		version: "1.17",
-		author: "NTKhang",
+		author: "SaGor",
 		countDown: 5,
 		role: 2,
 		description: {
@@ -50,74 +50,95 @@ module.exports = {
 
 	langs: {
 		vi: {
-			missingFileName: "⚠️ | Vui lòng nhập vào tên lệnh bạn muốn reload",
-			loaded: "✅ | Đã load command \"%1\" thành công",
-			loadedError: "❌ | Load command \"%1\" thất bại với lỗi\n%2: %3",
-			loadedSuccess: "✅ | Đã load thành công (%1) command",
-			loadedFail: "❌ | Load thất bại (%1) command\n%2",
-			openConsoleToSeeError: "👀 | Hãy mở console để xem chi tiết lỗi",
-			missingCommandNameUnload: "⚠️ | Vui lòng nhập vào tên lệnh bạn muốn unload",
-			unloaded: "✅ | Đã unload command \"%1\" thành công",
-			unloadedError: "❌ | Unload command \"%1\" thất bại với lỗi\n%2: %3",
-			missingUrlCodeOrFileName: "⚠️ | Vui lòng nhập vào url hoặc code và tên file lệnh bạn muốn cài đặt",
-			missingUrlOrCode: "⚠️ | Vui lòng nhập vào url hoặc code của tệp lệnh bạn muốn cài đặt",
-			missingFileNameInstall: "⚠️ | Vui lòng nhập vào tên file để lưu lệnh (đuôi .js)",
-			invalidUrl: "⚠️ | Vui lòng nhập vào url hợp lệ",
-			invalidUrlOrCode: "⚠️ | Không thể lấy được mã lệnh",
-			alreadExist: "⚠️ | File lệnh đã tồn tại, bạn có chắc chắn muốn ghi đè lên file lệnh cũ không?\nThả cảm xúc bất kì vào tin nhắn này để tiếp tục",
-			installed: "✅ | Đã cài đặt command \"%1\" thành công, file lệnh được lưu tại %2",
-			installedError: "❌ | Cài đặt command \"%1\" thất bại với lỗi\n%2: %3",
-			missingFile: "⚠️ | Không tìm thấy tệp lệnh \"%1\"",
-			invalidFileName: "⚠️ | Tên tệp lệnh không hợp lệ",
-			unloadedFile: "✅ | Đã unload lệnh \"%1\""
+			missingFileName: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗧𝗵𝗶𝗲̂́𝘂 𝘁𝗲̂𝗻 𝗹𝗲̣̂𝗻𝗵!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘁𝗲̂𝗻 𝗹𝗲̣̂𝗻𝗵 𝗯𝗮̣𝗻 𝗺𝘂𝗼̂́𝗻 𝗿𝗲𝗹𝗼𝗮𝗱\n└─❖",
+			loaded: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗟𝗢𝗔𝗗𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n└─❖",
+			loadedError: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗟𝗢𝗔𝗗 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			loadedSuccess: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗟𝗢𝗔𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📊 𝗧𝗼𝘁𝗮𝗹: %1 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗥𝗲𝗮𝗱𝘆\n└─❖",
+			loadedFail: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗟𝗢𝗔𝗗 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📊 𝗙𝗮𝗶𝗹𝗲𝗱: %1 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n│ 📝 𝗘𝗿𝗿𝗼𝗿𝘀:\n%2\n│ 😷 𝗢𝗽𝗲𝗻 𝗰𝗼𝗻𝘀𝗼𝗹𝗲 𝗳𝗼𝗿 𝗱𝗲𝘁𝗮𝗶𝗹𝘀\n└─❖",
+			missingCommandNameUnload: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗧𝗵𝗶𝗲̂́𝘂 𝘁𝗲̂𝗻 𝗹𝗲̣̂𝗻𝗵!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘁𝗲̂𝗻 𝗹𝗲̣̂𝗻𝗵 𝗯𝗮̣𝗻 𝗺𝘂𝗼̂́𝗻 𝘂𝗻𝗹𝗼𝗮𝗱\n└─❖",
+			unloaded: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗨𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗲\n└─❖",
+			unloadedError: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗨𝗡𝗟𝗢𝗔𝗗 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			missingUrlCodeOrFileName: "┌─❖\n│ 🚨 𝗫𝟲𝟵𝗫 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗧𝗵𝗶𝗲̂́𝘂 𝘁𝗵𝗼̂𝗻𝗴 𝘁𝗶𝗻!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘂𝗿𝗹 𝗵𝗼𝗮̣̆𝗰 𝗰𝗼𝗱𝗲\n│ 🔗 𝗩𝗮̀ 𝘁𝗲̂𝗻 𝗳𝗶𝗹𝗲 𝗹𝗲̣̂𝗻𝗵\n└─❖",
+			missingUrlOrCode: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗧𝗵𝗶𝗲̂́𝘂 𝘂𝗿𝗹/𝗰𝗼𝗱𝗲!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘂𝗿𝗹 𝗵𝗼𝗮̣̆𝗰 𝗰𝗼𝗱𝗲\n│ 𝗰𝘂̉𝗮 𝗳𝗶𝗹𝗲 𝗹𝗲̣̂𝗻𝗵\n└─❖",
+			missingFileNameInstall: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗧𝗵𝗶𝗲̂́𝘂 𝘁𝗲̂𝗻 𝗳𝗶𝗹𝗲!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘁𝗲̂𝗻 𝗳𝗶𝗹𝗲 (.𝗷𝘀)\n│ 𝗲̂̉ 𝗹𝘂̛𝘂 𝗹𝗲̣̂𝗻𝗵\n└─❖",
+			invalidUrl: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗨𝗥𝗟 𝗸𝗵𝗼̂𝗻𝗴 𝗵𝗼̛̣𝗽 𝗹𝗲̣!\n│ 📝 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗻𝗵𝗮̣̂𝗽 𝘂𝗿𝗹 𝗵𝗼̛̣𝗽 𝗹𝗲̣\n└─❖",
+			invalidUrlOrCode: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗞𝗵𝗼̂𝗻𝗴 𝗹𝗮̂́𝘆 đ𝘂̛𝗼̛̣𝗰 𝗰𝗼𝗱𝗲!\n│ 📝 𝗞𝗵𝗼̂𝗻𝗴 𝘁𝗶̀𝗺 𝘁𝗵𝗮̂́𝘆 𝗺𝗮̃ 𝗹𝗲̣̂𝗻𝗵\n│ 𝗵𝗼𝗮̣̆𝗰 𝘂𝗿𝗹 𝗸𝗵𝗼̂𝗻𝗴 𝗵𝗼̛̣𝗽 𝗹𝗲̣\n└─❖",
+			alreadExist: "┌─❖\n│ ⚠️ 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ 📁 𝗙𝗶𝗹𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝗲𝘅𝗶𝘀𝘁𝘀!\n│ 🎯 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗢𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝗲 𝗲𝘅𝗶𝘀𝘁𝗶𝗻𝗴 𝗳𝗶𝗹𝗲?\n│ 💡 𝗥𝗲𝗮𝗰𝘁 𝘁𝗼 𝘁𝗵𝗶𝘀 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝘁𝗼 𝗰𝗼𝗻𝗳𝗶𝗿𝗺\n└─❖",
+			installed: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📍 𝗣𝗮𝘁𝗵: %2\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n└─❖",
+			installedError: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			missingFile: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗙𝗜𝗟𝗘 𝗡𝗢𝗧 𝗙𝗢𝗨𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗖𝗵𝗲𝗰𝗸 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 𝗼𝗿 𝗽𝗮𝘁𝗵\n└─❖",
+			invalidFileName: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘!\n│ 📁 𝗙𝗶𝗹𝗲: %1\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝘂𝘀𝗲 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲\n└─❖",
+			unloadedFile: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗨𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗲\n└─❖"
 		},
 		en: {
-			missingFileName: "⚠️ | Please enter the command name you want to reload",
-			loaded: "✅ | Loaded command \"%1\" successfully",
-			loadedError: "❌ | Failed to load command \"%1\" with error\n%2: %3",
-			loadedSuccess: "✅ | Loaded successfully (%1) command",
-			loadedFail: "❌ | Failed to load (%1) command\n%2",
-			openConsoleToSeeError: "👀 | Open console to see error details",
-			missingCommandNameUnload: "⚠️ | Please enter the command name you want to unload",
-			unloaded: "✅ | Unloaded command \"%1\" successfully",
-			unloadedError: "❌ | Failed to unload command \"%1\" with error\n%2: %3",
-			missingUrlCodeOrFileName: "⚠️ | Please enter the url or code and command file name you want to install",
-			missingUrlOrCode: "⚠️ | Please enter the url or code of the command file you want to install",
-			missingFileNameInstall: "⚠️ | Please enter the file name to save the command (with .js extension)",
-			invalidUrl: "⚠️ | Please enter a valid url",
-			invalidUrlOrCode: "⚠️ | Unable to get command code",
-			alreadExist: "⚠️ | The command file already exists, are you sure you want to overwrite the old command file?\nReact to this message to continue",
-			installed: "✅ | Installed command \"%1\" successfully, the command file is saved at %2",
-			installedError: "❌ | Failed to install command \"%1\" with error\n%2: %3",
-			missingFile: "⚠️ | Command file \"%1\" not found",
-			invalidFileName: "⚠️ | Invalid command file name",
-			unloadedFile: "✅ | Unloaded command \"%1\""
+			missingFileName: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗠𝗜𝗦𝗦𝗜𝗡𝗚 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗡𝗔𝗠𝗘!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗻𝗮𝗺𝗲 𝘁𝗼 𝗿𝗲𝗹𝗼𝗮𝗱\n└─❖",
+			loaded: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗟𝗢𝗔𝗗𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n└─❖",
+			loadedError: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗟𝗢𝗔𝗗 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			loadedSuccess: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗟𝗢𝗔𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📊 𝗧𝗼𝘁𝗮𝗹: %1 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗥𝗲𝗮𝗱𝘆\n└─❖",
+			loadedFail: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗟𝗢𝗔𝗗 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📊 𝗙𝗮𝗶𝗹𝗲𝗱: %1 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n│ 📝 𝗘𝗿𝗿𝗼𝗿𝘀:\n%2\n│ 👀 𝗢𝗽𝗲𝗻 𝗰𝗼𝗻𝘀𝗼𝗹𝗲 𝗳𝗼𝗿 𝗱𝗲𝘁𝗮𝗶𝗹𝘀\n└─❖",
+			openConsoleToSeeError: "│ 😷 𝗢𝗽𝗲𝗻 𝗰𝗼𝗻𝘀𝗼𝗹𝗲 𝗳𝗼𝗿 𝗱𝗲𝘁𝗮𝗶𝗹𝘀",
+			missingCommandNameUnload: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗠𝗜𝗦𝗦𝗜𝗡𝗚 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗡𝗔𝗠𝗘!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗻𝗮𝗺𝗲 𝘁𝗼 𝘂𝗻𝗹𝗼𝗮𝗱\n└─❖",
+			unloaded: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗨𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗲\n└─❖",
+			unloadedError: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗨𝗡𝗟𝗢𝗔𝗗 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			missingUrlCodeOrFileName: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗠𝗜𝗦𝗦𝗜𝗡𝗚 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝘂𝗿𝗹/𝗰𝗼𝗱𝗲\n│ 🔗 𝗔𝗻𝗱 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲\n└─❖",
+			missingUrlOrCode: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗠𝗜𝗦𝗦𝗜𝗡𝗚 𝗨𝗥𝗟/𝗖𝗢𝗗𝗘!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝘂𝗿𝗹 𝗼𝗿 𝗰𝗼𝗱𝗲\n│ 𝗼𝗳 𝘁𝗵𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗳𝗶𝗹𝗲\n└─❖",
+			missingFileNameInstall: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗠𝗜𝗦𝗦𝗜𝗡𝗚 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 (.𝗷𝘀)\n│ 𝘁𝗼 𝘀𝗮𝘃𝗲 𝘁𝗵𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱\n└─❖",
+			invalidUrl: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗨𝗥𝗟!\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝗮 𝘃𝗮𝗹𝗶𝗱 𝘂𝗿𝗹\n└─❖",
+			invalidUrlOrCode: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗖𝗔𝗡'𝗧 𝗚𝗘𝗧 𝗖𝗢𝗗𝗘!\n│ 📝 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗿𝗲𝘁𝗿𝗶𝗲𝘃𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗰𝗼𝗱𝗲\n│ 𝗼𝗿 𝗶𝗻𝘃𝗮𝗹𝗶𝗱 𝘂𝗿𝗹\n└─❖",
+			alreadExist: "┌─❖\n│ ⚠️ 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ 📁 𝗙𝗜𝗟𝗘 𝗔𝗟𝗥𝗘𝗔𝗗𝗬 𝗘𝗫𝗜𝗦𝗧𝗦!\n│ 🎯 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗢𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝗲 𝗲𝘅𝗶𝘀𝘁𝗶𝗻𝗴 𝗳𝗶𝗹𝗲?\n│ 💡 𝗥𝗲𝗮𝗰𝘁 𝘁𝗼 𝘁𝗵𝗶𝘀 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝘁𝗼 𝗰𝗼𝗻𝗳𝗶𝗿𝗺\n└─❖",
+			installed: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📍 𝗣𝗮𝘁𝗵: %2\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗔𝗰𝘁𝗶𝘃𝗲\n└─❖",
+			installedError: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗙𝗔𝗜𝗟𝗘𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ ⚠️ 𝗘𝗿𝗿𝗼𝗿: %2\n│ 📝 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: %3\n└─❖",
+			missingFile: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗙𝗜𝗟𝗘 𝗡𝗢𝗧 𝗙𝗢𝗨𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 📝 𝗖𝗵𝗲𝗰𝗸 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲 𝗼𝗿 𝗽𝗮𝘁𝗵\n└─❖",
+			invalidFileName: "┌─❖\n│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘!\n│ 📁 𝗙𝗶𝗹𝗲: %1\n│ 📝 𝗣𝗹𝗲𝗮𝘀𝗲 𝘂𝘀𝗲 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗳𝗶𝗹𝗲 𝗻𝗮𝗺𝗲\n└─❖",
+			unloadedFile: "┌─❖\n│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n├─•\n│ ✅ 𝗨𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗!\n│ 📁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: %1\n│ 🎯 𝗦𝘁𝗮𝘁𝘂𝘀: 𝗜𝗻𝗮𝗰𝘁𝗶𝘃𝗲\n└─❖"
 		}
 	},
 
-	onStart: async ({ args, message, api, threadModel, userModel, globalModel, threadsData, usersData, globalData, event, commandName, getLang }) => {
+	onStart: async ({ args, message, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, event, commandName, getLang }) => {
 		const { unloadScripts, loadScripts } = global.utils;
-		if (
-			args[0] == "load"
-			&& args.length == 2
-		) {
+		
+		// Command syntax help
+		if (!args[0] || args[0].toLowerCase() === "help") {
+			return message.reply(
+				"┌─❖\n" +
+				"│ 🚀 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧 - 𝗖𝗠𝗗 𝗠𝗔𝗡𝗔𝗚𝗘𝗥\n" +
+				"├─•\n" +
+				"│ 📋 𝗔𝗩𝗔𝗜𝗟𝗔𝗕𝗟𝗘 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦:\n" +
+				"│\n" +
+				"│ • load <command>\n" +
+				"│   ↳ Load a single command\n" +
+				"│\n" +
+				"│ • loadAll\n" +
+				"│   ↳ Load all commands\n" +
+				"│\n" +
+				"│ • unload <command>\n" +
+				"│   ↳ Unload a command\n" +
+				"│\n" +
+				"│ • install <url> <filename.js>\n" +
+				"│   ↳ Install from URL\n" +
+				"│\n" +
+				"│ • install <filename.js> <code>\n" +
+				"│   ↳ Install from code\n" +
+				"├─•\n" +
+				"│ 💡 𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦:\n" +
+				"│ • cmd load admin\n" +
+				"│ • cmd install admin.js code\n" +
+				"│ • cmd unload admin\n" +
+				"└─❖"
+			);
+		}
+		
+		if (args[0] == "load" && args.length == 2) {
 			if (!args[1])
 				return message.reply(getLang("missingFileName"));
-			const infoLoad = loadScripts("cmds", args[1], log, configCommands, api, threadModel, userModel, globalModel, threadsData, usersData, globalData, getLang);
+			const infoLoad = loadScripts("cmds", args[1], log, configCommands, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getLang);
 			if (infoLoad.status == "success")
 				message.reply(getLang("loaded", infoLoad.name));
 			else {
-				message.reply(
-					getLang("loadedError", infoLoad.name, infoLoad.error.name, infoLoad.error.message)
-					+ "\n" + infoLoad.error.stack
-				);
-				console.log(infoLoad.errorWithThoutRemoveHomeDir);
+				message.reply(getLang("loadedError", infoLoad.name, infoLoad.error.name, infoLoad.error.message));
 			}
 		}
-		else if (
-			(args[0] || "").toLowerCase() == "loadall"
-			|| (args[0] == "load" && args.length > 2)
-		) {
+		else if ((args[0] || "").toLowerCase() == "loadall" || (args[0] == "load" && args.length > 2)) {
 			const fileNeedToLoad = args[0].toLowerCase() == "loadall" ?
 				fs.readdirSync(__dirname)
 					.filter(file =>
@@ -132,11 +153,11 @@ module.exports = {
 			const arrayFail = [];
 
 			for (const fileName of fileNeedToLoad) {
-				const infoLoad = loadScripts("cmds", fileName, log, configCommands, api, threadModel, userModel, globalModel, threadsData, usersData, globalData, getLang);
+				const infoLoad = loadScripts("cmds", fileName, log, configCommands, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getLang);
 				if (infoLoad.status == "success")
 					arraySucces.push(fileName);
 				else
-					arrayFail.push(` ❗ ${fileName} => ${infoLoad.error.name}: ${infoLoad.error.message}`);
+					arrayFail.push(` ❌ ${fileName} → ${infoLoad.error.name}: ${infoLoad.error.message}`);
 			}
 
 			let msg = "";
@@ -144,7 +165,6 @@ module.exports = {
 				msg += getLang("loadedSuccess", arraySucces.length);
 			if (arrayFail.length > 0) {
 				msg += (msg ? "\n" : "") + getLang("loadedFail", arrayFail.length, arrayFail.join("\n"));
-				msg += "\n" + getLang("openConsoleToSeeError");
 			}
 
 			message.reply(msg);
@@ -152,10 +172,14 @@ module.exports = {
 		else if (args[0] == "unload") {
 			if (!args[1])
 				return message.reply(getLang("missingCommandNameUnload"));
-			const infoUnload = unloadScripts("cmds", args[1], configCommands, getLang);
-			infoUnload.status == "success" ?
-				message.reply(getLang("unloaded", infoUnload.name)) :
-				message.reply(getLang("unloadedError", infoUnload.name, infoUnload.error.name, infoUnload.error.message));
+			try {
+				const infoUnload = unloadScripts("cmds", args[1], configCommands, getLang);
+				infoUnload.status == "success" ?
+					message.reply(getLang("unloaded", infoUnload.name)) :
+					message.reply(getLang("unloadedError", infoUnload.name, infoUnload.error.name, infoUnload.error.message));
+			} catch (error) {
+				message.reply(getLang("unloadedError", args[1], error.name, error.message));
+			}
 		}
 		else if (args[0] == "install") {
 			let url = args[1];
@@ -165,10 +189,7 @@ module.exports = {
 			if (!url || !fileName)
 				return message.reply(getLang("missingUrlCodeOrFileName"));
 
-			if (
-				url.endsWith(".js")
-				&& !isURL(url)
-			) {
+			if (url.endsWith(".js") && !isURL(url)) {
 				const tmp = fileName;
 				fileName = url;
 				url = tmp;
@@ -221,7 +242,7 @@ module.exports = {
 				return message.reply(getLang("invalidUrlOrCode"));
 
 			if (fs.existsSync(path.join(__dirname, fileName)))
-				return message.reply(getLang("alreadExist"), (err, info) => {
+				return message.reply(getLang("alreadExist", fileName), (err, info) => {
 					global.GoatBot.onReaction.set(info.messageID, {
 						commandName,
 						messageID: info.messageID,
@@ -234,14 +255,22 @@ module.exports = {
 					});
 				});
 			else {
-				const infoLoad = loadScripts("cmds", fileName, log, configCommands, api, threadModel, userModel, globalModel, threadsData, usersData, globalData, getLang, rawCode);
+				const infoLoad = loadScripts("cmds", fileName, log, configCommands, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getLang, rawCode);
 				infoLoad.status == "success" ?
 					message.reply(getLang("installed", infoLoad.name, path.join(__dirname, fileName).replace(process.cwd(), ""))) :
 					message.reply(getLang("installedError", infoLoad.name, infoLoad.error.name, infoLoad.error.message));
 			}
 		}
 		else
-			message.SyntaxError();
+			message.reply(
+				"┌─❖\n" +
+				"│ 🚨 𝗦𝗔𝗚𝗢𝗥 𝗕𝗢𝗧\n" +
+				"├─•\n" +
+				"│ ❌ 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗!\n" +
+				"│ 📝 𝗨𝘀𝗲: 𝗰𝗺𝗱 𝗹𝗼𝗮𝗱/𝗹𝗼𝗮𝗱𝗔𝗹𝗹/𝗶𝗻𝘀𝘁𝗮𝗹𝗹/𝘂𝗻𝗹𝗼𝗮𝗱\n" +
+				"│ 💡 𝗧𝘆𝗽𝗲: 𝗰𝗺𝗱 𝗵𝗲𝗹𝗽 𝗳𝗼𝗿 𝗴𝘂𝗶𝗱𝗲\n" +
+				"└─❖"
+			);
 	},
 
 	onReaction: async function ({ Reaction, message, event, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getLang }) {
@@ -262,10 +291,6 @@ const spinner = "\\|/-";
 let count = 0;
 
 function loadScripts(folder, fileName, log, configCommands, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getLang, rawCode) {
-	// global.GoatBot[folderModules == "cmds" ? "commandFilesPath" : "eventCommandsFilesPath"].push({
-	// 	filePath: pathCommand,
-	// 	commandName: [commandName, ...validAliases]
-	// });
 	const storageCommandFilesPath = global.GoatBot[folder == "cmds" ? "commandFilesPath" : "eventCommandsFilesPath"];
 
 	try {
@@ -287,7 +312,6 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 			setMap = "eventCommands";
 			commandType = "event command";
 		}
-		// const pathCommand = path.normalize(path.normalize(process.cwd() + `/${folder}/${fileName}.js`));
 		let pathCommand;
 		if (process.env.NODE_ENV == "development") {
 			const devPath = path.normalize(process.cwd() + `/scripts/${folder}/${fileName}.dev.js`);
@@ -299,7 +323,6 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 		else
 			pathCommand = path.normalize(process.cwd() + `/scripts/${folder}/${fileName}.js`);
 
-		// ————————————————— CHECK PACKAGE ————————————————— //
 		const contentFile = fs.readFileSync(pathCommand, "utf8");
 		let allPackage = contentFile.match(regExpCheckPackage);
 		if (allPackage) {
@@ -307,9 +330,6 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 				.map(p => p.match(/[`'"]([^`'"]+)[`'"]/)[1])
 				.filter(p => p.indexOf("/") !== 0 && p.indexOf("./") !== 0 && p.indexOf("../") !== 0 && p.indexOf(__dirname) !== 0);
 			for (let packageName of allPackage) {
-				// @user/abc => @user/abc
-				// @user/abc/dist/xyz.js => @user/abc
-				// @user/abc/dist/xyz => @user/abc
 				if (packageName.startsWith('@'))
 					packageName = packageName.split('/').slice(0, 2).join('/');
 				else
@@ -337,15 +357,12 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 				}
 			}
 		}
-		// ———————————————— GET OLD COMMAND ———————————————— //
 		const oldCommand = require(pathCommand);
 		const oldCommandName = oldCommand?.config?.name;
-		// —————————————— CHECK COMMAND EXIST ——————————————— //
 		if (!oldCommandName) {
 			if (GoatBot[setMap].get(oldCommandName)?.location != pathCommand)
 				throw new Error(`${commandType} name "${oldCommandName}" is already exist in command "${removeHomeDir(GoatBot[setMap].get(oldCommandName)?.location || "")}"`);
 		}
-		// ————————————————— CHECK ALIASES ————————————————— //
 		if (oldCommand.config.aliases) {
 			let oldAliases = oldCommand.config.aliases;
 			if (typeof oldAliases == "string")
@@ -353,27 +370,19 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 			for (const alias of oldAliases)
 				GoatBot.aliases.delete(alias);
 		}
-		// ——————————————— DELETE OLD COMMAND ——————————————— //
 		delete require.cache[require.resolve(pathCommand)];
-		// —————————————————————————————————————————————————— //
 
-
-
-		// ———————————————— GET NEW COMMAND ———————————————— //
 		const command = require(pathCommand);
 		command.location = pathCommand;
 		const configCommand = command.config;
 		if (!configCommand || typeof configCommand != "object")
 			throw new Error("config of command must be an object");
-		// —————————————————— CHECK SYNTAX —————————————————— //
 		const scriptName = configCommand.name;
 
-		// Check onChat function
 		const indexOnChat = allOnChat.findIndex(item => item == oldCommandName);
 		if (indexOnChat != -1)
 			allOnChat.splice(indexOnChat, 1);
 
-		// Check onFirstChat function
 		const indexOnFirstChat = allOnChat.findIndex(item => item == oldCommandName);
 		let oldOnFirstChat;
 		if (indexOnFirstChat != -1) {
@@ -381,17 +390,14 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 			allOnFirstChat.splice(indexOnFirstChat, 1);
 		}
 
-		// Check onEvent function
 		const indexOnEvent = allOnEvent.findIndex(item => item == oldCommandName);
 		if (indexOnEvent != -1)
 			allOnEvent.splice(indexOnEvent, 1);
 
-		// Check onAnyEvent function
 		const indexOnAnyEvent = allOnAnyEvent.findIndex(item => item == oldCommandName);
 		if (indexOnAnyEvent != -1)
 			allOnAnyEvent.splice(indexOnAnyEvent, 1);
 
-		// Check onLoad function
 		if (command.onLoad)
 			command.onLoad({ api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData });
 
@@ -402,7 +408,6 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 			throw new Error('Function onStart must be a function!');
 		if (!scriptName)
 			throw new Error('Name of command is missing!');
-		// ————————————————— CHECK ALIASES ————————————————— //
 		if (configCommand.aliases) {
 			let { aliases } = configCommand;
 			if (typeof aliases == "string")
@@ -415,15 +420,12 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 				GoatBot.aliases.set(alias, scriptName);
 			}
 		}
-		// ————————————————— CHECK ENVCONFIG ————————————————— //
-		// env Global
 		if (envGlobal) {
 			if (typeof envGlobal != "object" || Array.isArray(envGlobal))
 				throw new Error("envGlobal must be an object");
 			for (const key in envGlobal)
 				configCommands.envGlobal[key] = envGlobal[key];
 		}
-		// env Config
 		if (envConfig && typeof envConfig == "object" && !Array.isArray(envConfig)) {
 			if (!configCommands[typeEnvCommand][scriptName])
 				configCommands[typeEnvCommand][scriptName] = {};
@@ -437,7 +439,6 @@ function loadScripts(folder, fileName, log, configCommands, api, threadModel, us
 		if (findIndex != -1)
 			configCommands[keyUnloadCommand].splice(findIndex, 1);
 		fs.writeFileSync(client.dirConfigCommands, JSON.stringify(configCommands, null, 2));
-
 
 		if (command.onChat)
 			allOnChat.push(scriptName);
@@ -504,7 +505,6 @@ function unloadScripts(folder, fileName, configCommands, getLang) {
 	const indexOnAnyEvent = allOnAnyEvent.findIndex(item => item == commandName);
 	if (indexOnAnyEvent != -1)
 		allOnAnyEvent.splice(indexOnAnyEvent, 1);
-	// ————————————————— CHECK ALIASES ————————————————— //
 	if (command.config.aliases) {
 		let aliases = command.config?.aliases || [];
 		if (typeof aliases == "string")
