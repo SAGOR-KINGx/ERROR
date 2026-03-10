@@ -2,20 +2,22 @@ const createFuncMessage = global.utils.message;
 const handlerCheckDB = require("./handlerCheckData.js");
 
 module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, usersData, threadsData, dashBoardData, globalData) => {
-	const handlerEvents = require(process.env.NODE_ENV == 'development' ? "./handlerEvents.dev.js" : "./handlerEvents.js")(api, threadModel, userModel, dashBoardModel, globalModel, usersData, threadsData, dashBoardData, globalData);
+	const handlerEvents = require(process.env.NODE_ENV == 'development'
+		? "./handlerEvents.dev.js"
+		: "./handlerEvents.js")(api, threadModel, userModel, dashBoardModel, globalModel, usersData, threadsData, dashBoardData, globalData);
 
 	return async function (event) {
-	
-	const delay = ms => new Promise(res => setTimeout(res, ms));
 
-if (event.type === "message" || event.type === "message_reply") {
-	api.sendTypingIndicator(event.threadID, true);
+		const delay = ms => new Promise(res => setTimeout(res, ms));
 
-	await delay(Math.floor(Math.random() * 500) + 500); // 1 sec delay
+		// typing effect
+		if (event.type === "message" || event.type === "message_reply") {
+			api.sendTypingIndicator(event.threadID, true);
+			await delay(Math.floor(Math.random() * 500) + 500);
+			api.sendTypingIndicator(event.threadID, false);
+		}
 
-	api.sendTypingIndicator(event.threadID, false);
-}
-		// Check if the bot is in the inbox and anti inbox is enabled
+		// anti inbox
 		if (
 			global.GoatBot.config.antiInbox == true &&
 			(event.senderID == event.threadID || event.userID == event.senderID || event.isGroup == false) &&
@@ -26,6 +28,35 @@ if (event.type === "message" || event.type === "message_reply") {
 		const message = createFuncMessage(api, event);
 
 		await handlerCheckDB(usersData, threadsData, event);
+
+		// --------- NOPREFIX SUPPORT ----------
+		if (global.GoatBot.config.noPrefixMode && event.body && event.type === "message") {
+
+			const args = event.body.trim().split(/\s+/);
+			const commandName = args.shift().toLowerCase();
+
+			if (global.GoatBot.commands.has(commandName)) {
+
+				const command = global.GoatBot.commands.get(commandName);
+
+				try {
+					await command.onStart({
+						api,
+						event,
+						message,
+						args,
+						threadsData,
+						usersData
+					});
+				} catch (err) {
+					console.error("NoPrefix Command Error:", err);
+				}
+
+				return; // stop normal handler
+			}
+		}
+		// ------------------------------------
+
 		const handlerChat = await handlerEvents(event, message);
 		if (!handlerChat)
 			return;
@@ -36,9 +67,10 @@ if (event.type === "message" || event.type === "message_reply") {
 			typ, presence, read_receipt
 		} = handlerChat;
 
-
 		onAnyEvent();
+
 		switch (event.type) {
+
 			case "message":
 			case "message_reply":
 			case "message_unsend":
@@ -47,13 +79,17 @@ if (event.type === "message" || event.type === "message_reply") {
 				onStart();
 				onReply();
 				break;
+
 			case "event":
 				handlerEvent();
 				onEvent();
 				break;
-				case "message_reaction": {
+
+			case "message_reaction": {
+
 				const isAdmin = global.GoatBot.config.adminBot.includes(event.userID);
 
+				// admin reaction kick
 				if (
 					event.reaction === "🚫" ||
 					event.reaction === "🦶" ||
@@ -66,6 +102,7 @@ if (event.type === "message" || event.type === "message_reply") {
 					}
 				}
 
+				// angry reaction unsend
 				if (
 					event.reaction === "😠" ||
 					event.reaction === "😡" ||
@@ -77,23 +114,20 @@ if (event.type === "message" || event.type === "message_reply") {
 
 				onReaction();
 				break;
-   	       }        			    				  
+			}
+
 			case "typ":
 				typ();
 				break;
+
 			case "presence":
 				presence();
 				break;
+
 			case "read_receipt":
 				read_receipt();
 				break;
-			// case "friend_request_received":
-			// { /* code block */ }
-			// break;
 
-			// case "friend_request_cancel"
-			// { /* code block */ }
-			// break;
 			default:
 				break;
 		}
