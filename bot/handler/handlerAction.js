@@ -11,7 +11,7 @@ module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, user
 if (event.type === "message" || event.type === "message_reply") {
 	api.sendTypingIndicator(event.threadID, true);
 
-	await delay(Math.floor(Math.random() * 4000) + 2000); // 2-6 sec delay
+	await delay(Math.floor(Math.random() * 1000) + 500); // 1.5 sec delay
 
 	api.sendTypingIndicator(event.threadID, false);
 }
