@@ -7,7 +7,10 @@ const userModel = new Schema({
 		unique: true
 	},
 	name: String,
-	gender: Number,
+	gender: {
+		type: String,
+		default: ""
+	},
 	vanity: String,
 	exp: {
 		type: Number,
