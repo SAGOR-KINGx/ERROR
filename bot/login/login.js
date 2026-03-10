@@ -222,7 +222,7 @@ async function getAppStateToLogin() {
       process.exit(1);
     }
     // Read the new cookie just written to the cookie.txt file
-    const cookiePath = path.join(process.cwd(), 'account.txt');
+    const cookiePath = global.client.dirAccount;
     if (!existsSync(cookiePath)) {
       log.error("AUTOLOGIN", "Unable to find account.txt file after autologin.");
       process.exit(1);
