@@ -26,8 +26,8 @@
     "whiteListThreadIds": []
   },
   "database": {
-    "type": "sqlite",
-    "uriMongodb": "mongodb+srv://sagorislam404:11sagorislam@cluster0.f3chkox.mongodb.net/simsimi?retryWrites=true&w=majority&appName=Cluster0",
+    "type": "mongodb",
+    "uriMongodb": "mongodb+srv://jahidulislamsagorx69:sagorislam@goatbot.8kbvc3v.mongodb.net/?appName=goatbot",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true
   },
