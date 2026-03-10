@@ -5,6 +5,16 @@ module.exports = (api, threadModel, userModel, dashBoardModel, globalModel, user
 	const handlerEvents = require(process.env.NODE_ENV == 'development' ? "./handlerEvents.dev.js" : "./handlerEvents.js")(api, threadModel, userModel, dashBoardModel, globalModel, usersData, threadsData, dashBoardData, globalData);
 
 	return async function (event) {
+	
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+
+if (event.type === "message" || event.type === "message_reply") {
+	api.sendTypingIndicator(event.threadID, true);
+
+	await delay(Math.floor(Math.random() * 4000) + 2000); // 2-6 sec delay
+
+	api.sendTypingIndicator(event.threadID, false);
+}
 		// Check if the bot is in the inbox and anti inbox is enabled
 		if (
 			global.GoatBot.config.antiInbox == true &&
