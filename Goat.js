@@ -24,6 +24,14 @@ if (typeof File === 'undefined') {
 process.on('unhandledRejection', error => console.log(error));
 process.on('uncaughtException', error => console.log(error));
 
+if (!process.stderr.clearLine) {
+  process.stderr.clearLine = function () {};
+}
+
+if (!process.stderr.cursorTo) {
+  process.stderr.cursorTo = function () {};
+}
+
 const fs = require("fs-extra");
 const path = require("path");
 const log = require('./logger/log.js');
