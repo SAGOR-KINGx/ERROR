@@ -101,6 +101,7 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "sagor-nx-fca": "^0.0.2",
+    "sagor-alldl-core": "^0.0.2",
     "sagor-video-downloader": "^1.2.1",
     "searchitunes": "^2.5.4",
     "sequelize": "^6.19.0",
